@@ -1,0 +1,228 @@
+.parking-space {
+	padding: 10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin:10px;
+	width: 200px;
+	height: 100px;
+}
+
+.elevator-tower {
+	padding: 10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin:10px;
+	width: 250px;
+	height: 150px;
+}
+
+.level-selector {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parking-space-popup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.explorer-app {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.garage-floor {
+	display: grid;
+	grid-template-columns: repeat(5, 50px) 10px repeat(3, 50px) 10px repeat(5, 50px);
+	grid-template-rows: repeat(5, 50px) 10px repeat(3, 50px) 10px repeat(3, 50px) 10px repeat(2, 50px) 10px repeat(3, 50px) 10px repeat(3, 50px) 10px repeat(3, 50px) 10px repeat(5, 50px);
+	grid-template-areas:
+		"nw-block nw-block n1 n2 n3 pillar1 n4 n5 n6 pillar2 n7 n8 n9 ne-block ne-block"
+		"nw-block nw-block n1 n2 n3 pillar1 n4 n5 n6 pillar2 n7 n8 n9 ne-block ne-block"
+		"w1 w1 . . . . . . . . . . . e1 e1"
+		"w2 w2 . . . . . . . . . . . e2 e2"
+		"w3 w3 . . . . . . . . . . . e3 e3"
+		"pillar3 pillar3 . . c1 c1 c1 c1 c1 . . . . pillar4 pillar4"
+		"w4 w4 . . c1 c1 c1 c1 c1 . . . . e4 e4"
+		"w5 w5 . . north-elevator north-elevator north-elevator north-elevator north-elevator . . . . e5 e5"
+		"w6 w6 . . north-elevator north-elevator north-elevator north-elevator north-elevator . . . . e6 e6"
+		"pillar5 pillar5 . . north-elevator north-elevator north-elevator north-elevator north-elevator . . . . pillar6 pillar6"
+		"w7 w7 . . c2 c2 c2 north-elevator-empty north-elevator-empty . . . . e7 e7"
+		"w8 w8 . . c3 c3 c3 c4 c4 . . . . e8 e8"
+		"w9 w9 . . c5 c5 c5 c6 c6 . . . . e9 e9"
+		"pillar7 pillar7 . . pillar8 pillar8 pillar8 pillar9 pillar9 . . . . pillar10 pillar10"
+		"w10 w10 . . c7 c7 c7 c8 c8 . . . . e10 e10"
+		"w11 w11 . . c9 c9 c9 c10 c10 . . . . e11 e11"
+		"pillar11 pillar11 . . pillar12 pillar12 pillar12 pillar13 pillar13 . . . . pillar14 pillar14"
+		"w12 w12 . . c11 c11 c11 c12 c12 . . . . e12 e12"
+		"w13 w13 . . c13 c13 c13 c14 c14 . . . . e13 e13"
+		"w14 w14 . . c15 c15 c15 c16 c16 . . . . e14 e14"
+		"pillar15 pillar15 . . pillar16 pillar16 pillar16 pillar17 pillar17 . . . . pillar18 pillar18"
+		"w15 w15 . . c17 c17 c17 c18 c18 . . . . e15 e15"
+		"w16 w16 . . c19 c19 c19 c20 c20 . . . . e16 e16"
+		"w17 w17 . . c21 c21 c21 south-elevator-empty south-elevator-empty . . . . e17 e17"
+		"pillar19 pillar19 . . south-elevator south-elevator south-elevator south-elevator south-elevator . . . . pillar20 pillar20"
+		"west-empty west-empty . . south-elevator south-elevator south-elevator south-elevator south-elevator . . . . e18 e18"
+		"w18 w18 . . south-elevator south-elevator south-elevator south-elevator south-elevator . . . . e19 e19"
+		"w19 w19 . . c22 c22 c22 c22 c22 . . . . e20 e20"
+		"pillar21 pillar21 . . c22 c22 c22 c22 c22 . . . . pillar22 pillar22"
+		"w20 w20 . . . . . . . . . . . e21 e21"
+		"w21 w21 . . . . . . . . . . . e22 e22"
+		"w22 w22 . . . . . . . . . . . e23 e23"
+		"sw-block sw-block s1 s2 s3 pillar23 s4 s5 s6 pillar24 s7 s8 s9 se-block se-block"
+		"sw-block sw-block s1 s2 s3 pillar23 s4 s5 s6 pillar24 s7 s8 s9 se-block se-block"
+}
+
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px black solid;
+}
+
+.pillar {
+	background-color: black;
+}
+
+.fixed {
+	background-color: grey;
+	color: white;
+}
+
+/*
+ * Paste script output here
+ */
+.nw-block{ grid-area: nw-block; }
+.n1{ grid-area: n1; }
+.n2{ grid-area: n2; }
+.n3{ grid-area: n3; }
+.pillar1{ grid-area: pillar1; }
+.n4{ grid-area: n4; }
+.n5{ grid-area: n5; }
+.n6{ grid-area: n6; }
+.pillar2{ grid-area: pillar2; }
+.n7{ grid-area: n7; }
+.n8{ grid-area: n8; }
+.n9{ grid-area: n9; }
+.ne-block{ grid-area: ne-block; }
+.w1{ grid-area: w1; }
+.e1{ grid-area: e1; }
+.w2{ grid-area: w2; }
+.e2{ grid-area: e2; }
+.w3{ grid-area: w3; }
+.e3{ grid-area: e3; }
+.pillar3{ grid-area: pillar3; }
+.c1{ grid-area: c1; }
+.pillar4{ grid-area: pillar4; }
+.w4{ grid-area: w4; }
+.e4{ grid-area: e4; }
+.w5{ grid-area: w5; }
+.north-elevator{ grid-area: north-elevator; }
+.south-elevator{ grid-area: south-elevator; }
+.e5{ grid-area: e5; }
+.w6{ grid-area: w6; }
+.e6{ grid-area: e6; }
+.pillar5{ grid-area: pillar5; }
+.pillar6{ grid-area: pillar6; }
+.w7{ grid-area: w7; }
+.c2{ grid-area: c2; }
+.north-elevator-empty{ grid-area: north-elevator-empty; }
+.south-elevator-empty{ grid-area: south-elevator-empty; }
+.e7{ grid-area: e7; }
+.w8{ grid-area: w8; }
+.c3{ grid-area: c3; }
+.c4{ grid-area: c4; }
+.e8{ grid-area: e8; }
+.w9{ grid-area: w9; }
+.c5{ grid-area: c5; }
+.c6{ grid-area: c6; }
+.e9{ grid-area: e9; }
+.pillar7{ grid-area: pillar7; }
+.pillar8{ grid-area: pillar8; }
+.pillar9{ grid-area: pillar9; }
+.pillar10{ grid-area: pillar10; }
+.w10{ grid-area: w10; }
+.c7{ grid-area: c7; }
+.c8{ grid-area: c8; }
+.e10{ grid-area: e10; }
+.w11{ grid-area: w11; }
+.c9{ grid-area: c9; }
+.c10{ grid-area: c10; }
+.e11{ grid-area: e11; }
+.pillar11{ grid-area: pillar11; }
+.pillar12{ grid-area: pillar12; }
+.pillar13{ grid-area: pillar13; }
+.pillar14{ grid-area: pillar14; }
+.w12{ grid-area: w12; }
+.c11{ grid-area: c11; }
+.c12{ grid-area: c12; }
+.e12{ grid-area: e12; }
+.w13{ grid-area: w13; }
+.c13{ grid-area: c13; }
+.c14{ grid-area: c14; }
+.e13{ grid-area: e13; }
+.w14{ grid-area: w14; }
+.c15{ grid-area: c15; }
+.c16{ grid-area: c16; }
+.e14{ grid-area: e14; }
+.pillar15{ grid-area: pillar15; }
+.pillar16{ grid-area: pillar16; }
+.pillar17{ grid-area: pillar17; }
+.pillar18{ grid-area: pillar18; }
+.w15{ grid-area: w15; }
+.c17{ grid-area: c17; }
+.c18{ grid-area: c18; }
+.e15{ grid-area: e15; }
+.w16{ grid-area: w16; }
+.c19{ grid-area: c19; }
+.c20{ grid-area: c20; }
+.e16{ grid-area: e16; }
+.w17{ grid-area: w17; }
+.c21{ grid-area: c21; }
+.c22{ grid-area: c22; }
+.e17{ grid-area: e17; }
+.pillar19{ grid-area: pillar19; }
+.south-elevator{ grid-area: south-elevator; }
+.pillar20{ grid-area: pillar20; }
+.w18{ grid-area: w18; }
+.e18{ grid-area: e18; }
+.w19{ grid-area: w19; }
+.e19{ grid-area: e19; }
+.w20{ grid-area: w20; }
+.c23{ grid-area: c23; }
+.e20{ grid-area: e20; }
+.pillar21{ grid-area: pillar21; }
+.pillar22{ grid-area: pillar22; }
+.w21{ grid-area: w21; }
+.c24{ grid-area: c24; }
+.c25{ grid-area: c25; }
+.e21{ grid-area: e21; }
+.w22{ grid-area: w22; }
+.c26{ grid-area: c26; }
+.c27{ grid-area: c27; }
+.e22{ grid-area: e22; }
+.w23{ grid-area: w23; }
+.c28{ grid-area: c28; }
+.c29{ grid-area: c29; }
+.e23{ grid-area: e23; }
+.sw-block{ grid-area: sw-block; }
+.s1{ grid-area: s1; }
+.s2{ grid-area: s2; }
+.s3{ grid-area: s3; }
+.pillar23{ grid-area: pillar23; }
+.s4{ grid-area: s4; }
+.s5{ grid-area: s5; }
+.s6{ grid-area: s6; }
+.pillar24{ grid-area: pillar24; }
+.s7{ grid-area: s7; }
+.s8{ grid-area: s8; }
+.s9{ grid-area: s9; }
+.se-block{ grid-area: se-block; }
+.west-empty{ grid-area: west-empty; }
+/*
+ * End script output paste
+ */
