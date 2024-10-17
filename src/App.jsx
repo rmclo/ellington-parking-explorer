@@ -110,7 +110,7 @@ function getParkingSpaceInfo(spaceNumber) {
 }
 
 function Garage() {
-	const [currentLevel, setCurrentLevel] = useState('C');
+	const [currentLevel, setCurrentLevel] = useState('B');
 
 	const levelMapping = new Map([
 		['B', new Map([
@@ -228,5 +228,3 @@ function Garage() {
 		return ((n % m) + m) % m;
 	}
 }
-
-
